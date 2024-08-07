@@ -1,0 +1,10 @@
+rock:doc3.txt-1,doc2.txt-1
+saxofone:doc4.txt-1
+pop:doc5.txt-1
+bateria:doc3.txt-1
+piano:doc5.txt-1,doc1.txt-1
+teclado:doc5.txt-1
+jazz:doc4.txt-1
+violão:doc2.txt-1
+eletrônica:doc5.txt-1
+MPB:doc2.txt-1

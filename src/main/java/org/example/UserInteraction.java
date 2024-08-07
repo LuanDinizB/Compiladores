@@ -1,15 +1,31 @@
 package org.example;
 
+import java.io.File;
 import java.util.*;
 
 public class UserInteraction {
     private static final Map<String, String> symbolTable = new LinkedHashMap<>();
     private static final Set<String> requiredElements = new HashSet<>(Set.of("<instrumento>", "<gênero>", "<método>"));
+    private static final String INVERTED_INDEX_FILE = "src/files/inverted_index.txt";
+    private static final String DOCUMENTS_DIR = "src/files/documents/";
+    private static final InvertedIndex invertedIndex = new InvertedIndex();
     private static Scanner scn = new Scanner(System.in);
+
+    public UserInteraction() {
+        // Index documents when the UserInteraction is initialized
+        invertedIndex.indexDocuments(DOCUMENTS_DIR);
+        invertedIndex.saveIndex(INVERTED_INDEX_FILE);
+    }
 
     public void processInput(String input) {
         String response = processPartialInput(input);
         System.out.println(response);
+        if (response.equals("Elemento adicionado à tabela de símbolos: " + getSymbolTable())) {
+            // Update the inverted index if needed
+            updateInvertedIndex();
+        }
+        String answer = provideAnswer();
+        System.out.println(answer);
     }
 
     private String processPartialInput(String input) {
@@ -101,5 +117,23 @@ public class UserInteraction {
             sb.setLength(sb.length() - 2); // Remove the trailing comma and space
         }
         return "[" + sb.toString() + "]";
+    }
+
+    private void updateInvertedIndex() {
+        invertedIndex.indexDocuments(DOCUMENTS_DIR);
+        invertedIndex.saveIndex(INVERTED_INDEX_FILE);
+    }
+
+    private String provideAnswer() {
+        invertedIndex.loadIndex(INVERTED_INDEX_FILE);
+        TFIDFCalculator tfidfCalculator = new TFIDFCalculator(invertedIndex, symbolTable, getTotalDocuments());
+        String bestMatch = tfidfCalculator.calculateBestMatch();
+        return "A resposta padrão mais provável é: " + bestMatch;
+    }
+
+    private int getTotalDocuments() {
+        File dir = new File(DOCUMENTS_DIR);
+        File[] files = dir.listFiles((d, name) -> name.endsWith(".txt"));
+        return files != null ? files.length : 0;
     }
 }

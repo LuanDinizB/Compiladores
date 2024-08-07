@@ -1,6 +1,7 @@
 package org.example;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ElementRecognizer {
     private static final Set<String> instrumentos = new HashSet<>(Set.of(
@@ -22,13 +23,14 @@ public class ElementRecognizer {
     }
 
     public static String identifyElement(String word) {
-        if (instrumentos.contains(word)) {
-            return "<instrumento>";
-        } else if (generos.contains(word)) {
-            return "<gênero>";
-        } else if (metodos.contains(word)) {
-            return "<método>";
-        }
-        return null;
+        return identifyType(word);
+    }
+
+    public static Set<String> getAllTerms() {
+        Set<String> allTerms = new HashSet<>();
+        allTerms.addAll(instrumentos);
+        allTerms.addAll(generos);
+        allTerms.addAll(metodos);
+        return allTerms;
     }
 }

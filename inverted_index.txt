@@ -1,0 +1,3 @@
+instrumento:Aqui estão algumas informações sobre instrumentos.
+método:Aqui estão alguns métodos que você pode usar.
+gênero musical:Aqui estão algumas informações sobre gêneros musicais.
