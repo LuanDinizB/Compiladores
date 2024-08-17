@@ -30,7 +30,7 @@ public class TFIDFCalculator {
         }
 
         if (scores.isEmpty()) {
-            return "Desculpe, não consegui encontrar uma resposta.";
+            return null;
         }
 
         return scores.entrySet().stream()

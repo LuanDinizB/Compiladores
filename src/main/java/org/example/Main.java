@@ -7,9 +7,14 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         UserInteraction userInteraction = new UserInteraction();
 
-        System.out.println("Digite uma pergunta ou atribuição:");
-        String input = scn.nextLine().trim();
+        String input;
+        while (true) {
+            System.out.println("Digite uma pergunta ou atribuição:");
+            System.out.println("Digite SAIR para sair:");
+            input = scn.nextLine().trim();
 
-        userInteraction.processInput(input);
+            userInteraction.processInput(input);
+        }
+
     }
 }

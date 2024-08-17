@@ -1,6 +1,9 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class UserInteraction {
@@ -18,6 +21,10 @@ public class UserInteraction {
     }
 
     public void processInput(String input) {
+        if(Objects.equals(input, "sair")) {
+            System.out.println("Até mais!");
+            System.exit(0);
+        }
         String response = processPartialInput(input);
         System.out.println(response);
         if (response.equals("Elemento adicionado à tabela de símbolos: " + getSymbolTable())) {
@@ -128,12 +135,31 @@ public class UserInteraction {
         invertedIndex.loadIndex(INVERTED_INDEX_FILE);
         TFIDFCalculator tfidfCalculator = new TFIDFCalculator(invertedIndex, symbolTable, getTotalDocuments());
         String bestMatch = tfidfCalculator.calculateBestMatch();
-        return "A resposta padrão mais provável é: " + bestMatch;
+        if(bestMatch == null) {
+            return "Desculpe, não consegui encontrar uma resposta.";
+        }
+        return "A resposta padrão mais provável é: " + readDocument(bestMatch);
     }
 
     private int getTotalDocuments() {
         File dir = new File(DOCUMENTS_DIR);
         File[] files = dir.listFiles((d, name) -> name.endsWith(".txt"));
         return files != null ? files.length : 0;
+    }
+
+    public static String readDocument(String docName) {
+        StringBuilder content = new StringBuilder();
+        File file = new File("src/files/documents/" + docName);
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                content.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o documento: " + e.getMessage());
+        }
+
+        return content.toString();
     }
 }
