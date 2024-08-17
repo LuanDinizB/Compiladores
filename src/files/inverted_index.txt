@@ -1,10 +1,25 @@
-rock:doc3.txt-1,doc2.txt-1
-saxofone:doc4.txt-1
-pop:doc5.txt-1
-bateria:doc3.txt-1
-piano:doc5.txt-1,doc1.txt-1
-teclado:doc5.txt-1
-jazz:doc4.txt-1
-violão:doc2.txt-1
-eletrônica:doc5.txt-1
-MPB:doc2.txt-1
+violino:doc18.txt-1,doc28.txt-1,doc38.txt-1,doc8.txt-1
+clarinete:doc10.txt-1,doc40.txt-1,doc20.txt-1,doc30.txt-1
+partituras:doc54.txt-1,doc74.txt-1,doc13.txt-1,doc23.txt-1,doc64.txt-1,doc44.txt-1,doc59.txt-1
+teclado:doc24.txt-1,doc4.txt-1,doc14.txt-1,doc34.txt-1
+improvisação:doc43.txt-1,doc55.txt-1,doc60.txt-1,doc63.txt-1,doc39.txt-1,doc52.txt-1,doc57.txt-1,doc75.txt-1,doc19.txt-1,doc72.txt-1,doc45.txt-1
+jazz:doc10.txt-1,doc63.txt-1,doc39.txt-1,doc40.txt-1,doc20.txt-1,doc31.txt-1,doc43.txt-1,doc9.txt-1,doc29.txt-1,doc11.txt-1,doc21.txt-1,doc19.txt-1,doc41.txt-1,doc30.txt-1
+flauta:doc17.txt-1,doc37.txt-1,doc7.txt-1,doc27.txt-1
+blues:doc9.txt-1,doc29.txt-1,doc35.txt-1,doc65.txt-1,doc5.txt-1,doc25.txt-1,doc39.txt-1,doc15.txt-1,doc19.txt-1,doc45.txt-1
+pop:doc48.txt-1,doc29.txt-1,doc5.txt-1,doc66.txt-1,doc25.txt-1,doc22.txt-1,doc15.txt-1,doc40.txt-1,doc2.txt-1,doc32.txt-1,doc46.txt-1
+rock:doc42.txt-1,doc35.txt-1,doc5.txt-1,doc62.txt-1,doc25.txt-1,doc22.txt-1,doc15.txt-1,doc2.txt-1
+acordes:doc42.txt-1,doc49.txt-1,doc53.txt-1,doc63.txt-1,doc66.txt-1,doc57.txt-1,doc46.txt-1,doc73.txt-1,doc43.txt-1,doc69.txt-1,doc32.txt-1,doc58.txt-1,doc45.txt-1
+piano:doc3.txt-1,doc13.txt-1,doc23.txt-1,doc1.txt-1,doc33.txt-1,doc34.txt-1
+técnicas básicas:doc61.txt-1,doc76.txt-1,doc56.txt-1
+samba:doc48.txt-1,doc67.txt-1,doc68.txt-1,doc47.txt-1
+eletrônica:doc50.txt-1,doc70.txt-1
+bateria:doc36.txt-1,doc42.txt-1,doc62.txt-1,doc26.txt-1,doc6.txt-1,doc16.txt-1
+bossa nova:doc48.txt-1,doc49.txt-1,doc68.txt-1,doc69.txt-1
+escalas:doc65.txt-1,doc52.txt-1,doc57.txt-1,doc72.txt-1
+violão:doc12.txt-1,doc49.txt-1,doc22.txt-1,doc2.txt-1,doc32.txt-1
+trompete:doc11.txt-1,doc21.txt-1,doc41.txt-1,doc31.txt-1
+clássico:doc64.txt-1,doc44.txt-1
+saxofone:doc9.txt-1,doc29.txt-1,doc39.txt-1,doc19.txt-1
+guitarra:doc42.txt-1,doc35.txt-1,doc5.txt-1,doc62.txt-1,doc25.txt-1,doc15.txt-1
+folk:doc51.txt-1,doc71.txt-1
+MPB:doc48.txt-1,doc68.txt-1

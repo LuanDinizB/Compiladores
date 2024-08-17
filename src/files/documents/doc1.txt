@@ -1,1 +1,1 @@
-piano é um instrumento musical que possui teclas. O piano é muito usado em músicas clássicas.
+O piano padrão possui 88 teclas, o que corresponde a 52 notas brancas e 36 notas pretas. Estas notas cobrem 7 oitavas completas e mais uma nota na oitava inferior, proporcionando uma ampla gama para a execução de diferentes estilos musicais.

@@ -1,4 +1,0 @@
-você:Qual instrumento você deseja?
-instrumento:Qual instrumento você deseja?
-deseja?:Qual instrumento você deseja?
-qual:Qual instrumento você deseja?
